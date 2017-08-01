@@ -45,7 +45,7 @@ class VoIPInnovationsCore {
         $params['login'] = $this->login;
         $params['secret'] = $this->secret;
 
-        return $params;
+        return array_filter($params, function($value, $key){return !is_null($value);});
     }
 
 }
