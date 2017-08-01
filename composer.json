@@ -1,0 +1,20 @@
+{
+    "name": "blob/laravel-voipinnovations",
+    "description": "A simple Laravel interface for interacting with the VoIPInnovations API.",
+    "keywords": ["laravel", "VoIP", "Innovations", "api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bloby"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "VoIPInnovations\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
