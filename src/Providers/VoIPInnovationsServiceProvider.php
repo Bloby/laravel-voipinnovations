@@ -39,9 +39,13 @@ class VoIPInnovationsServiceProvider extends ServiceProvider {
 			$loader->alias('VoIPInnovations', 'VoIPInnovations\Facades\VoIPInnovations');
 		});
 
-		$this->publishes([
-			dirname(__FILE__).'/config/voipinnovations.php' => config_path('voipinnovations.php')
-		]);
+        $configPath = config_path('voipinnovations.php');
+        if (!\Illuminate\Support\Facades\File::exists($configPath)) {
+            $this->publishes([
+                __DIR__ . '/../config/voipinnovations.php' => $configPath
+            ]);
+        }
+        
 	}
 
 	/**
