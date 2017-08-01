@@ -19,7 +19,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=AssignIntlDID
      */
-    public function assignIntlDID($cityID, $epgID)
+    public function assignIntlDID($cityID = null, $epgID = null)
     {
         return $this->client->AssignIntlDID($this->addDefaultParams(compact(['cityID','epgID'])));
     }
@@ -30,7 +30,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=GetCNAMDisplay
      */
-    public function getCNAMDisplay($tn)
+    public function getCNAMDisplay($tn = null)
     {
         return $this->client->GetCNAMDisplay($this->addDefaultParams(compact(['tn'])));
     }
@@ -51,7 +51,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=GetFaxToEmail
      */
-    public function getFaxToEmail($tn)
+    public function getFaxToEmail($tn = null)
     {
         return $this->client->GetFaxToEmail($this->addDefaultParams(compact(['tn'])));
     }
@@ -62,7 +62,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=ReleaseIntlDID
      */
-    public function releaseIntlDID($tn)
+    public function releaseIntlDID($tn = null)
     {
         return $this->client->ReleaseIntlDID($this->addDefaultParams(compact(['tn'])));
     }
@@ -73,7 +73,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=RemoveCNAM
      */
-    public function removeCNAM($tn)
+    public function removeCNAM($tn = null)
     {
         return $this->client->RemoveCNAM($this->addDefaultParams(compact(['tn'])));
     }
@@ -84,7 +84,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=RemoveFaxToEmail
      */
-    public function removeFaxToEmail($tn)
+    public function removeFaxToEmail($tn = null)
     {
         return $this->client->RemoveFaxToEmail($this->addDefaultParams(compact(['tn'])));
     }
@@ -96,7 +96,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=SetFaxToEmail
      */
-    public function setFaxToEmail($tn, $email)
+    public function setFaxToEmail($tn = null, $email = null)
     {
         return $this->client->SetFaxToEmail($this->addDefaultParams(compact(['tn','email'])));
     }
@@ -108,7 +108,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=UpdateCNAMDisplay
      */
-    public function updateCNAMDisplay($tn, $name)
+    public function updateCNAMDisplay($tn = null, $name = null)
     {
         return $this->client->UpdateCNAMDisplay($this->addDefaultParams(compact(['tn','name'])));
     }
@@ -126,7 +126,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=addLocation
      */
-    public function addLocation($did, $address1, $address2, $city, $state, $zip, $plusFour, $callerName)
+    public function addLocation($did = null, $address1 = null, $address2 = null, $city = null, $state = null, $zip = null, $plusFour = null, $callerName = null)
     {
         return $this->client->addLocation($this->addDefaultParams(compact([
             'did','address1','address2','city','state','zip','plusFour','callerName'
@@ -152,7 +152,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=assignDID
      */
-    public function assignDID($didParams)
+    public function assignDID($didParams = null)
     {
         return $this->client->assignDID($this->addDefaultParams(compact(['didParams'])));
     }
@@ -196,7 +196,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=configDID
      */
-    public function configDID($didParams)
+    public function configDID($didParams = null)
     {
         return $this->client->configDID($this->addDefaultParams(compact(['didParams'])));
     }
@@ -215,7 +215,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=getDIDCount
      */
-    public function getDIDCount($state, $lata, $rateCenter, $npa, $nxx, $tier, $t38, $cnam, $orderby)
+    public function getDIDCount($state = null, $lata = null, $rateCenter = null, $npa = null, $nxx = null, $tier = null, $t38 = null, $cnam = null, $orderby = null)
     {
         return $this->client->getDIDCount($this->addDefaultParams(compact([
             'state','lata','rateCenter','npa','nxx','tier','t38','cnam','orderby'
@@ -235,7 +235,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=getDIDs
      */
-    public function getDIDs($state, $lata, $rateCenter, $npa, $nxx, $tier, $t38, $cnam)
+    public function getDIDs($state = null, $lata = null, $rateCenter = null, $npa = null, $nxx = null, $tier = null, $t38 = null, $cnam = null)
     {
         return $this->client->getDIDs($this->addDefaultParams(compact([
             'state','lata','rateCenter','npa','nxx','tier','t38','cnam'
@@ -248,7 +248,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=getLocations
      */
-    public function getLocations($did)
+    public function getLocations($did = null)
     {
         return $this->client->getLocations($this->addDefaultParams(compact(['did'])));
     }
@@ -259,7 +259,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=getPortDetails
      */
-    public function getPortDetails($portId)
+    public function getPortDetails($portId = null)
     {
         return $this->client->getPortDetails($this->addDefaultParams(compact(['portId'])));
     }
@@ -270,7 +270,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=getProvisioningHistory
      */
-    public function getProvisioningHistory($did)
+    public function getProvisioningHistory($did = null)
     {
         return $this->client->getProvisioningHistory($this->addDefaultParams(compact(['did'])));
     }
@@ -288,7 +288,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=insert911
      */
-    public function insert911($did, $address1, $address2, $city, $state, $zip, $plusFour, $callerName)
+    public function insert911($did = null, $address1 = null, $address2 = null, $city = null, $state = null, $zip = null, $plusFour = null, $callerName = null)
     {
         return $this->client->insert911($this->addDefaultParams(compact([
             'did','address1','address2','city','state','zip','plusFour','callerName'
@@ -301,7 +301,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=isPortable
      */
-    public function isPortable($tn)
+    public function isPortable($tn = null)
     {
         return $this->client->isPortable($this->addDefaultParams(compact(['tn'])));
     }
@@ -313,7 +313,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=provisionLocation
      */
-    public function provisionLocation($did, $locationId)
+    public function provisionLocation($did = null, $locationId = null)
     {
         return $this->client->provisionLocation($this->addDefaultParams(compact(['did','locationId'])));
     }
@@ -324,7 +324,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=query911
      */
-    public function query911($did)
+    public function query911($did = null)
     {
         return $this->client->query911($this->addDefaultParams(compact(['did'])));
     }
@@ -335,7 +335,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=queryDID
      */
-    public function queryDID($did)
+    public function queryDID($did = null)
     {
         return $this->client->queryDID($this->addDefaultParams(compact(['did'])));
     }
@@ -359,7 +359,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=releaseDID
      */
-    public function releaseDID($didParams)
+    public function releaseDID($didParams = null)
     {
         return $this->client->releaseDID($this->addDefaultParams(compact(['didParams'])));
     }
@@ -370,7 +370,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=remove911
      */
-    public function remove911($did)
+    public function remove911($did = null)
     {
         return $this->client->remove911($this->addDefaultParams(compact(['did'])));
     }
@@ -382,7 +382,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=removeLocation
      */
-    public function removeLocation($locationId, $did)
+    public function removeLocation($locationId = null, $did = null)
     {
         return $this->client->removeLocation($this->addDefaultParams(compact(['locationId','did'])));
     }
@@ -406,7 +406,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=reserveDID
      */
-    public function reserveDID($didParams)
+    public function reserveDID($didParams = null)
     {
         return $this->client->reserveDID($this->addDefaultParams(compact(['didParams'])));
     }
@@ -424,7 +424,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=update911
      */
-    public function update911($did, $address1, $address2, $city, $state, $zip, $plusFour, $callerName)
+    public function update911($did = null, $address1 = null, $address2 = null, $city = null, $state = null, $zip = null, $plusFour = null, $callerName = null)
     {
         return $this->client->update911($this->addDefaultParams(compact([
             'did','address1','address2','city','state','zip','plusFour','callerName'
@@ -443,7 +443,7 @@ class VoIPInnovations extends VoIPInnovationsCore {
      *
      * @see http://dev.voipinnovations.com/VOIP/Services/APIService.asmx?op=validate911
      */
-    public function validate911($address1, $address2, $city, $state, $zip, $plusFour, $callerName)
+    public function validate911($address1 = null, $address2 = null, $city = null, $state = null, $zip = null, $plusFour = null, $callerName = null)
     {
         return $this->client->validate911($this->addDefaultParams(compact([
             'address1','address2','city','state','zip','plusFour','callerName'

@@ -45,7 +45,7 @@ class VoIPInnovationsServiceProvider extends ServiceProvider {
                 __DIR__ . '/../config/voipinnovations.php' => $configPath
             ]);
         }
-        
+
 	}
 
 	/**
